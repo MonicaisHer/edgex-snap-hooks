@@ -104,7 +104,7 @@ func migrateLegacyOptions() error {
 	if err != nil {
 		return err
 	}
-	if legacyOptions != "" && legacyOptions != "{}" {
+	if legacyOptions != "" && legacyOptions != "{}" && legacyOptions != "Key  Value" {
 		return fmt.Errorf("legacy 'env.' options must not be mixed with the new 'config.' and 'app.' options")
 	}
 	return nil
